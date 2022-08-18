@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Guessing Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div id="main-game-container">
+
+      <div id="title-container">
+        <h1 id='title' style='color:#F7F8FA;font-family: Helvetica;'><b>THE GUESSING GAME</b></h1>
+      </div>
+
+      <div id="message-container">
+        <h3 id='message' style='color:#F7F8FA;font-family: Helvetica;'>Pick a number 1-100. You have 5 guesses!</h3>
+      </div>
+
+      <div id="guessing-container">
+        <input id='enter-guess-form' type="text"  style="width:200px;" placeholder="Enter guess here">
+        <input id='submit-guess-button' class="btn" type="submit"  style="width:100px;" value="Guess!">
+      </div>
+
+      <div id="incorrect-guesses-container">
+        <div class="incorrect-guess-box" id="incorrect-guess-box-1">
+          <h3 class='incorrect-guess' id="incorrect-guess-1">?</h3>
+        </div>
+        <div class="incorrect-guess-box" id="incorrect-guess-box-2">
+          <h3 class='incorrect-guess' id="incorrect-guess-2">?</h3>
+        </div>
+        <div class="incorrect-guess-box" id="incorrect-guess-box-3">
+          <h3 class='incorrect-guess' id="incorrect-guess-3">?</h3>
+        </div>
+        <div class="incorrect-guess-box" id="incorrect-guess-box-4">
+          <h3 class='incorrect-guess' id="incorrect-guess-4">?</h3>
+        </div>
+        <div class="incorrect-guess-box" id="incorrect-guess-box-5">
+          <h3 class='incorrect-guess' id="incorrect-guess-5">?</h3>
+        </div>
+      </div>
+
+      <div id="hint-play-again-container">
+        <input id='hint-button' class="btn" type="submit" value="Hint?">
+        <input id='play-again-button' class="btn" type="submit" value="Play again?">
+      </div>
+
+      <div id="hint-container">
+        <h3 id="hint"> </h3>
+      </div>
+
+    </div>
+
+    <script src='js/guessing-game.js'></script>
+  </body>
+
+</html>
