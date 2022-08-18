@@ -73,14 +73,15 @@ function playGame(){
     // guess a number
     const guessButton=document.getElementById('submit-guess-button');
     guessButton.addEventListener('click',function(){
-        const guessForm=document.getElementById('enter-guess-form');
-        const guess=Number(guessForm.value);
+        const guess=Number(document.getElementById('enter-guess-form').value);
         const result=game.playersGuessSubmission(guess);
         if(!(result==='You Win!')){
-            document.getElementById(`incorrect-guess-box-${game.pastGuesses.length}`).style.background='#FC8571'; //update 'incorrect guess' boxes
-            document.getElementById(`incorrect-guess-${game.pastGuesses.length}`).innerHTML=guess;
+            const incorrectGuessBox=document.getElementById(`incorrect-guess-box-${game.pastGuesses.length}`); //update 'incorrect guess' box background color
+            incorrectGuessBox.style.background='#FC8571';
+            const incorrectGuessBoxHeading=document.getElementById(`incorrect-guess-${game.pastGuesses.length}`); //update 'incorrect guess' box heading
+            incorrectGuessBoxHeading.innerHTML=guess;
         };
-        document.getElementById('message').innerHTML=result;
+        document.getElementById('message').innerHTML=result; //update message heading
         guessForm.value='';
     });
     // get a hint
@@ -88,7 +89,7 @@ function playGame(){
     hintButton.addEventListener('click',function(){
         const hintArray=game.provideHint();
         const hintString=`The winning number is either ${hintArray[0]}, ${hintArray[1]}, or ${hintArray[2]}.`;
-        document.getElementById('message').innerHTML=hintString;
+        document.getElementById('message').innerHTML=hintString; //update hint heading
     });
     // reset the game
     const playAgainButton=document.getElementById('play-again-button');
